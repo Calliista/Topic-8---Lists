@@ -7,7 +7,7 @@ namespace Topic_8___Lists
         static void Main(string[] args)
         {
             Random generator = new Random();
-            int randNum
+            int randNum, max, min;
             //Tutorial
             List<string> names = new List<string> { "Trinity", "Leo", "Morpheous", "Smith" };
             Console.WriteLine(names[1] + " is 'The One'.");
@@ -29,7 +29,16 @@ namespace Topic_8___Lists
                 Console.WriteLine("");
             }
             randNum = generator.Next(5);
-            
+
+            //Assignment 2
+            List<int> numbers = new List<int>();
+            Console.WriteLine("How many numbers do you need?");
+            Console.ReadLine();
+            Console.WriteLine("Enter a maximum value");
+            max = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter a minimum value");
+            min = Convert.ToInt32(Console.ReadLine());
+
         }
     }
 }
