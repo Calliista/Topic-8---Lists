@@ -35,19 +35,20 @@ namespace Topic_8___Lists
             randNum = generator.Next(5);
 
             //Assignment 2
-            
+            List<int> numbers = new List<int>();
+
             Console.WriteLine("How many numbers do you need?");
             count = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter a maximum value");
             max = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter a minimum value");
             min = Convert.ToInt32(Console.ReadLine());
-            List<int> numbers = new List<int>();
-            count = numbers.Count;
-            for (int i = 0; i < 1; i++)
+            for (int i = 0; i < count; i++)
             {
-                Console.WriteLine(colors[randomIndex]);
+                Console.WriteLine();
+                numbers.Add(generator.Next(count));
             }
+            Console.WriteLine();
         }
     }
 }
