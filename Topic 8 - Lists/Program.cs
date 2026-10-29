@@ -19,23 +19,29 @@ namespace Topic_8___Lists
             {
                 Console.WriteLine(i + ". " + names[i]);
             }
-
-
-
-            //Assignment 1
-            List<string> colors = new List<string> { "Red", "Orange", "Blue", "Green", "Purple" };
-            int randomIndex = Random.Shared.Next(colors.Count);
-
-            Console.WriteLine(colors[0] + ", " + colors[1] + ", " + colors[2] + ", " + colors[3] + ", " + colors[4]);
-
-            for (int i = 0; i < 1; i++)
+            List<int> numbers = new List<int>();
+            for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine(colors[randomIndex]);
+                Console.WriteLine("");
+
             }
             randNum = generator.Next(5);
 
+            //Assignment 1
+            List<string> colors = new List<string> { "Red", "Orange", "Blue", "Green", "Purple" };
+            int randomIndex = generator.Next(colors.Count);
+
+            //Console.WriteLine(colors[0] + ", " + colors[1] + ", " + colors[2] + ", " + colors[3] + ", " + colors[4]);
+
+            for (int i = 0; i < colors.Count; i++)
+            {
+                Console.Write(colors[i] + ", ");
+            }
+
+            Console.WriteLine(colors[randomIndex]);
+
             //Assignment 2
-            List<int> numbers = new List<int>();
+            numbers = new List<int>();
 
             Console.WriteLine("How many numbers do you need?");
             count = Convert.ToInt32(Console.ReadLine());
@@ -43,9 +49,10 @@ namespace Topic_8___Lists
             max = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter a minimum value");
             min = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < count; i++)
+            
+            for (int i = 0; i < numbers.Count; i++)
             {
-                Console.WriteLine();
+                Console.Write(colors[i] + ", ");
                 numbers.Add(generator.Next(count));
             }
             Console.WriteLine();
